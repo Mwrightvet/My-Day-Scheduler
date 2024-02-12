@@ -7,7 +7,7 @@ by M. Wright [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.sv
 - [Userstory](#Userstory)
 - [Credits](#Credits)
 - [License](#License)
-- [Contributors](#Contributions)
+- [Credit](#Credit)
 - [DEMO](#DEMO)
 
 #Description
@@ -31,6 +31,8 @@ User Story: As an employee with a busy schedule, I want to add important events 
 #License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+#Credit
+https://www.youtube.com/watch?v=xAyCPllpTIs
 
 
 #DEMO
