@@ -11,9 +11,10 @@ const scheduleContainer = document.querySelector(".schedule__container");
 
 let selectedColor, active;
 
-// Event Listeners
+// Click event Listeners
 taskContainer.addEventListener("click", selectTask);
 scheduleContainer.addEventListener("click", setColors);
+deselectBtn.addEventListener("click", resetTask);
 
 // Task/Event click
 function selectTask(e) {
