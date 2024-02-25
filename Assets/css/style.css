@@ -2,18 +2,18 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 10;
   padding: 0;
 }
 
 body {
-  font-family: "ubuntu", sans-serif;
-  background-color: rgba(14, 36, 36, 0.744);
+  font-family: "Ubuntu", sans-serif;
+  background-color: rgba(82, 154, 154, 0.532);
   color: white;
 }
 
 .container {
-  height: 100vh;
+  height: 100;
   width: 100;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ h3 {
 /*Task Container*/
 .task__container {
   display: flex;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
   padding: 10px;
 }
 
@@ -44,7 +44,7 @@ h3 {
 }
 
 .task__container .task__name.selected {
-  border: 2px solid rgb(40, 38, 38); /* Add a black border for the selected task */
+  border: 2px solid rgb(255, 251, 251); /* Add a border for the selected task */
 }
 
 #deselect {
