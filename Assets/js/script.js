@@ -13,7 +13,8 @@ let selectedColor, active;
 
 // Event Listeners
 taskContainer.addEventListener("click", selectTask);
-scheduleContainer.addEventListener("click");
+scheduleContainer.addEventListener("click", setColors);
+
 // Task/Event click
 function selectTask(e) {
   resetTasks();
@@ -23,27 +24,27 @@ function selectTask(e) {
   switch (e.target.id) {
     case "coffee":
       activeTask(coffeeTask, taskColor);
-      icon = '<i class="fas fa-mug-hot></i>';
+      icon = '<i class="fas fa-mug-hot"></i>';
       break;
     case "email":
       activeTask(emailTask, taskColor);
-      icon = '<i class="fas fa-envelope></i>';
+      icon = '<i class="fas fa-envelope"></i>';
       break;
     case "lunch":
       activeTask(lunchTask, taskColor);
-      icon = '<i class="fas fa-cutlery></i>';
+      icon = '<i class="fas fa-cutlery"></i>';
       break;
     case "meeting":
       activeTask(meetingTask, taskColor);
-      icon = '<i class="fas fa-group></i>';
+      icon = '<i class="fas fa-users-rectangle"></i>';
       break;
     case "focus":
       activeTask(focusTask, taskColor);
-      icon = '<i class="fas fa-laptop></i>';
+      icon = '<i class="fas fa-laptop"></i>';
       break;
     case "break":
       activeTask(breakTask, taskColor);
-      icon = '<i class="fas fa-refresh></i>';
+      icon = '<i class="fas fa-spa"></i>';
       break;
   }
 }
