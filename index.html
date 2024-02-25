@@ -1,25 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-        <!-- jQuery UI <link> tag -->
-        <link
-        rel="stylesheet"
-        href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-      />
-      <link rel="stylesheet" href="./assets/css/style.css" />
+   <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- jQuery UI tag -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+   <!-- style sheet-->
+  <link rel="stylesheet" href="/Assets/css/style.css" />
   
-      <title>jQuery Day SCheduler</title>
-    </head>
-    <body>
 
+  <title>jQuery Day SCheduler</title>
+</head>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <!-- jQuery UI <script> tag -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="./assets/js/script.js"></script>
+<body>
+
+  <div class="container">
+    <h1>Schedule Event</h1>
+
+    <div class="task__container">
+      <div class="task__name" id="coffee" style="background-color: rgb(89, 141, 141);">Coffee</div>
+      <div class="task__name" id="email" style="background-color: rgb(162, 126, 143);">Read Emails</div>
+      <div class="task__name" id="lunch" style="background-color:indianred;">Lunch</div>
+      <div class="task__name" id="meeting" style="background-color:rgb(131, 159, 128);">Meeting</div>
+      <div class="task__name" id="break" style="background-color:rgb(59, 71, 94);">Break</div>
+      <div class="task__name" id="focus" style="background-color:rgb(156, 114, 158);">Focus Work</div>
+      <div class="task__name" id="deselect" style="background-color:rgba(155, 153, 153, 0.574);">Deselect</div>
+
+    </div>
+
+    <h3>Add selected event to your Day</h3>
+
+    <div class="schedule__container">
+      <div class="days__container">
+        <span class="corner"></span>
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+      </div>
+
+      <div class="part__day">
+        <span class="time">8am <br> - </br> 9am</span>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        </div>
+      <div class="part__day">
+        <span class="time">9am <br> - </br> 10am</span>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+      </div>
+      <div class="part__day">
+        <span class="time">10am <br> - </br> 11am</span>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+      </div>
+      <div class="part__day">
+        <span class="time">11am <br> - </br> 12pm</span>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+      </div>
+      <div class="part__day">
+        <span class="time">12pm <br> - </br> 1pm</span>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+      </div>
+      <div class="part__day">
+        <span class="time">1pm <br> - </br> 3pm</span>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+      </div>
+      <div class="part__day">
+        <span class="time">3pm <br> - </br> 5pm</span>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+        <div class="task"></div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery UI <script> tag -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
