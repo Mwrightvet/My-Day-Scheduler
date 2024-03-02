@@ -35,8 +35,6 @@ A simple calendar application that allows a user to save events for each hour of
 # User Story
 User Story: As an employee with a busy schedule, I want to add important events to a daily planner so that I can manage my time effectively. 
 
-# Credits
-
 # License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -44,4 +42,4 @@ User Story: As an employee with a busy schedule, I want to add important events 
 Source: [YouTube Tutorial](https://www.youtube.com/watch?v=xAyCPllpTIs)
 
 # Demo
-[![DEMO](./Assets/demo/05-third-party-apis-demo.gif)](./Assets/demo/05-third-party-apis-demo.gif)
+[![DEMO](./Assets/demo/Myscheduler.gif)](./Assets/demo/Myscheduler.gif)
