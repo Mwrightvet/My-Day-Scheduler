@@ -15,17 +15,28 @@ A simple calendar application that allows a user to save events for each hour of
 
 
 #Installation
-HTML CSS jQuer and Day.js. Day.js was designed to work both in the browser and in Node.js. 
+ ## Bootstrap: Used for styling HTML elements and components.
+  ### Installation: Include Bootstrap via CDN or install it via npm:
+    ```
+    npm install bootstrap
+    ```
 
-npm install dayjs
-or
-yarn add dayjs
-or
-pnpm add dayjs
+ ## Font Awesome: Used for displaying icons.
+  ### Installation: Include Font Awesome via CDN or install it via npm:
+    ```
+    npm install @fortawesome/fontawesome-free
+    ```
+
+ ## Day.js: Used for working with dates and times.
+   ### Installation: Include Day.js via CDN or install it via npm:
+    ```
+    npm install dayjs
+    ```
 
 
 #Userstory
 User Story: As an employee with a busy schedule, I want to add important events to a daily planner so that I can manage my time effectively. 
+
 #Credits
 
 #License
