@@ -1,136 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-   <!-- Font Awesome for Icons -->
+  <title>Daily Task App</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- jQuery UI tag -->
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
-   <!-- style sheet-->
-  <link rel="stylesheet" href="/Assets/css/style.css" />
-  
 
-  <title>jQuery Day SCheduler</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"></script>
+
 </head>
-
 <body>
+<div class="calendar-frame">
+  <header class="container py-3 calendar-frame">
+    <h1>Daily Task App</h1>
+    <p id="currentDay"></p>
+  </header>
 
-  <div class="container">
-    <h1>Schedule Event</h1>
+  <main class="container py-3 calendar-frame">
+    <div class="row">
+      <div class="col-xl-10">
+        <div class="time-block">
+          <div class="row">
+            <div class="col-1 hour">9AM</div>
+            <div class="col-8 description"><textarea class="form-control"></textarea></div>
+            <div class="col-1 saveBtn"><button class="btn btn-success">Save</button></div>
+            <div class="col-1 clearBtn"><button class="btn btn-info"><i class="fas fa-undo"></i></button></div>
 
-    <div class="task__container">
-      <div class="task__name" id="coffee" style="background-color: rgb(89, 141, 141);">Coffee</div>
-      <div class="task__name" id="email" style="background-color: rgb(162, 126, 143);">Read Emails</div>
-      <div class="task__name" id="lunch" style="background-color:indianred;">Lunch</div>
-      <div class="task__name" id="meeting" style="background-color:rgb(131, 159, 128);">Meeting</div>
-      <div class="task__name" id="break" style="background-color:rgb(59, 71, 94);">Break</div>
-      <div class="task__name" id="focus" style="background-color:rgb(156, 114, 158);">Focus Work</div>
-      <div class="task__name" id="deselect" style="background-color:rgba(155, 153, 153, 0.574);">Deselect</div>
-
-    </div>
-
-    <h3>Add selected event to your Day</h3>
-
-    <div class="schedule__container">
-      <div class="days__container">
-        <span class="corner"></span>
-        <div class="day">Sunday</div>
-        <div class="day">Monday</div>
-        <div class="day">Tuesday</div>
-        <div class="day">Wednesday</div>
-        <div class="day">Thursday</div>
-        <div class="day">Friday</div>
-        <div class="day">Saturday</div>
-      </div>
-      <div class="part__day">
-        <span class="time">7am <br> - </br> 8am</span>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
         </div>
-      <div class="part__day">
-        <span class="time">8am <br> - </br> 9am</span>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
         </div>
-       <div class="part__day">
-        <span class="time">9am <br> - </br> 10am</span>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-      </div>
-      <div class="part__day">
-        <span class="time">10am <br> - </br> 11am</span>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-      </div>
-      <div class="part__day">
-        <span class="time">11am <br> - </br> 12pm</span>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-      </div>
-      <div class="part__day">
-        <span class="time">12pm <br> - </br> 1pm</span>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-      </div>
-      <div class="part__day">
-        <span class="time">1pm <br> - </br> 3pm</span>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-      </div>
-      <div class="part__day">
-        <span class="time">3pm <br> - </br> 5pm</span>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-        <div class="task"></div>
-      </div>
+ 
+        <div class="time-block">
+            <div class="row">
+              <div class="col-1 hour">10AM</div>
+              <div class="col-8 description"><textarea class="form-control"></textarea></div>
+              <div class="col-1 saveBtn"><button class="btn btn-success">Save</button></div>
+              <div class="col-1 clearBtn"><button class="btn btn-info"><i class="fas fa-undo"></i></button></div>
+              <div class="col-8 presetBtn"><button class="btn btn-secondary preset" data-preset="Break"><i class="fas fa-coffee"></i></button></div>
+           </div>
+          </div>
+          <div class="time-block">
+            <div class="row">
+              <div class="col-1 hour">11AM</div>
+              <div class="col-8 description"><textarea class="form-control"></textarea></div>
+              <div class="col-1 saveBtn"><button class="btn btn-success">Save</button></div>
+              <div class="col-1 clearBtn"><button class="btn btn-info"><i class="fas fa-undo"></i></button></div>
+              <div class="col-8 presetBtn"><button class="btn btn-secondary preset" data-preset="Lunch"><i class="fas fa-utensils"></i></button></div>
+           </div>
+          </div>
+          <div class="time-block">
+            <div class="row">
+              <div class="col-1 hour">12PM</div>
+              <div class="col-8 description"><textarea class="form-control"></textarea></div>
+              <div class="col-1 saveBtn"><button class="btn btn-success">Save</button></div>
+              <div class="col-1 clearBtn"><button class="btn btn-info"><i class="fas fa-undo"></i></button></div>
+              <div class="col-8 presetBtn"><button class="btn btn-secondary preset" data-preset="Lunch"><i class="fas fa-utensils"></i></button></div>
+           </div>
+          </div>
+          <div class="time-block">
+            <div class="row">
+              <div class="col-1 hour">1PM</div>
+              <div class="col-8 description"><textarea class="form-control"></textarea></div>
+              <div class="col-1 saveBtn"><button class="btn btn-success">Save</button></div>
+              <div class="col-1 clearBtn"><button class="btn btn-info"><i class="fas fa-undo"></i></button></div>
+              <div class="col-8 presetBtn"><button class="btn btn-secondary preset" data-preset="Lunch"><i class="fas fa-utensils"></i></button></div>
+           </div>
+          </div>
+          <div class="time-block">
+            <div class="row">
+              <div class="col-1 hour">2PM</div>
+              <div class="col-8 description"><textarea class="form-control"></textarea></div>
+              <div class="col-1 saveBtn"><button class="btn btn-success">Save</button></div>
+              <div class="col-1 clearBtn"><button class="btn btn-info"><i class="fas fa-undo"></i></button></div>
+              <div class="col-8 presetBtn"><button class="btn btn-secondary preset" data-preset="Break"><i class="fas fa-coffee"></i></button></div>
+           </div>
+          </div>
+          <div class="time-block">
+            <div class="row">
+              <div class="col-1 hour">3PM</div>
+              <div class="col-8 description"><textarea class="form-control"></textarea></div>
+              <div class="col-1 saveBtn"><button class="btn btn-success">Save</button></div>
+              <div class="col-1 clearBtn"><button class="btn btn-info"><i class="fas fa-undo"></i></button></div>
+              <div class="col-8 presetBtn"><button class="btn btn-secondary preset" data-preset="Break"><i class="fas fa-coffee"></i></button></div>
+           </div>
+          </div>
+          <div class="time-block">
+            <div class="row">
+              <div class="col-1 hour">4PM</div>
+              <div class="col-8 description"><textarea class="form-control"></textarea></div>
+              <div class="col-1 saveBtn"><button class="btn btn-success">Save</button></div>
+              <div class="col-1 clearBtn"><button class="btn btn-info"><i class="fas fa-undo"></i></button></div>
+              <div class="col-8 presetBtn"><button class="btn btn-secondary preset" data-preset="Break"><i class="fas fa-coffee"></i></button></div>
+           </div>
+          </div>
+          <div class="time-block">
+            <div class="row">
+              <div class="col-1 hour">5PM</div>
+              <div class="col-8 description"><textarea class="form-control"></textarea></div>
+              <div class="col-1 saveBtn"><button class="btn btn-success">Save</button></div>
+              <div class="col-1 clearBtn"><button class="btn btn-info"><i class="fas fa-undo"></i></button></div>
+           </div>
+          </div>
+        </div>
     </div>
+    <button class="btn btn-danger reset-all-btn">Reset All</button>
   </div>
-  <!-- jQuery UI <script> tag -->
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="./assets/js/script.js"></script>
-</body>
+  </main>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
 </html>
