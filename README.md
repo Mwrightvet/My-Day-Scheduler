@@ -2,19 +2,18 @@
 by M. Wright [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents 
-- [Description](#Description)
-- [Installation](#Installation)
-- [Userstory](#Userstory)
-- [Credits](#Credits)
-- [License](#License)
-- [Credit](#Credit)
-- [DEMO](#DEMO)
+- [Description](#description)
+- [Installation](#installation)
+- [User Story](#user-story)
+- [Credits](#credits)
+- [License](#license)
+- [Credit](#credit)
+- [Demo](#demo)
 
-#Description
+# Description
 A simple calendar application that allows a user to save events for each hour of a typical working day (9am–5pm). This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery. 
 
-
-#Installation
+# Installation
  ## Bootstrap: Used for styling HTML elements and components.
   ### Installation: Include Bootstrap via CDN or install it via npm:
     ```
@@ -33,18 +32,16 @@ A simple calendar application that allows a user to save events for each hour of
     npm install dayjs
     ```
 
-
-#Userstory
+# User Story
 User Story: As an employee with a busy schedule, I want to add important events to a daily planner so that I can manage my time effectively. 
 
-#Credits
+# Credits
 
-#License
+# License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-#Credit
-https://www.youtube.com/watch?v=xAyCPllpTIs
+# Credit
+Source: [YouTube Tutorial](https://www.youtube.com/watch?v=xAyCPllpTIs)
 
-
-#DEMO
+# Demo
 [![DEMO](./Assets/demo/05-third-party-apis-demo.gif)](./Assets/demo/05-third-party-apis-demo.gif)
