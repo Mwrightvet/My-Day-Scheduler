@@ -40,6 +40,9 @@ User Story: As an employee with a busy schedule, I want to add important events 
 
 # Credit
 Source: [YouTube Tutorial](https://www.youtube.com/watch?v=xAyCPllpTIs)
+Source Code assistant:  Learning Assistant 
+Source for local storage: https://stackoverflow.com/questions/75228484/unable-to-correctly-pull-or-display-from-localstorage-using-jquery
+Sourcce for current day and future past present: https://stackoverflow.com/questions/75262457/converting-moment-js-to-day-js 
 
 # Demo
 [![DEMO](./Assets/demo/Myscheduler.gif)](./Assets/demo/Myscheduler.gif)
