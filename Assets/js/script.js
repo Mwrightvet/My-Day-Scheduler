@@ -1,89 +1,63 @@
-//  Setting the variables
-const coffeeTask = document.getElementById("coffee");
-const emailTask = document.getElementById("email");
-const lunchTask = document.getElementById("lunch");
-const meetingTask = document.getElementById("meeting");
-const focusTask = document.getElementById("focus");
-const breakTask = document.getElementById("break");
-const deselectBtn = document.getElementById("deselect");
-const taskContainer = document.querySelector(".task__container");
-const scheduleContainer = document.querySelector(".schedule__container");
+     $(document).ready(function() {
+      // Display current day
+      $("#currentDay").text(dayjs().format('dddd, MMMM D, YYYY'));
 
-let selectedColor, active;
+      // Color code time blocks
+      function updateHourBlocks() {
+        var currentHour = dayjs().hour();
+        $(".time-block").each(function() {
+          var blockHour = parseInt($(this).find(".hour").text().trim().replace("AM", "").replace("PM", ""));
+          if (blockHour < currentHour) {
+            $(this).removeClass("present future").addClass("past");
+          } else if (blockHour === currentHour) {
+            $(this).removeClass("past future").addClass("present");
+          } else {
+            $(this).removeClass("past present").addClass("future");
+          }
+        });
+      }
 
-// Click event Listeners
-taskContainer.addEventListener("click", selectTask);
-scheduleContainer.addEventListener("click", setColors);
-deselectBtn.addEventListener("click", resetTask);
+      updateHourBlocks();
 
-// Task/Event click
-function selectTask(e) {
-  resetTasks();
+      // Load events from local storage
+      $(".time-block .description textarea").each(function() {
+        var hour = $(this).closest(".time-block").find(".hour").text().trim();
+        var savedEvent = localStorage.getItem(hour);
+        if (savedEvent) {
+          $(this).val(savedEvent);
+        }
+      });
 
-  taskColor = e.target.style.backgroundColor;
+      // Save event to local storage
+      $(".time-block .saveBtn button").on("click", function() {
+        var hour = $(this).closest(".time-block").find(".hour").text().trim();
+        var eventText = $(this).closest(".time-block").find(".description textarea").val().trim();
+        if (eventText !== "") {
+          localStorage.setItem(hour, eventText);
+        } else {
+          localStorage.removeItem(hour);
+        }
+      });
 
-  switch (e.target.id) {
-    case "coffee":
-      activeTask(coffeeTask, taskColor);
-      icon = '<i class="fas fa-mug-hot"></i>';
-      break;
-    case "email":
-      activeTask(emailTask, taskColor);
-      icon = '<i class="fas fa-envelope"></i>';
-      break;
-    case "lunch":
-      activeTask(lunchTask, taskColor);
-      icon = '<i class="fas fa-cutlery"></i>';
-      break;
-    case "meeting":
-      activeTask(meetingTask, taskColor);
-      icon = '<i class="fas fa-users-rectangle"></i>';
-      break;
-    case "focus":
-      activeTask(focusTask, taskColor);
-      icon = '<i class="fas fa-laptop"></i>';
-      break;
-    case "break":
-      activeTask(breakTask, taskColor);
-      icon = '<i class="fas fa-spa"></i>';
-      break;
-  }
-}
+       // Pre-populate text when preset button is clicked
+       $(".presetBtn .preset").on("click", function() {
+        var presetText = $(this).data("preset");
+        $(this).closest(".time-block").find(".description textarea").val(presetText);
+      });
 
-//select colors for the schedule
-function setColors(e) {
-  if (e.target.classList.contains("task") && active === true) {
-    e.target.style.backgroundColor = selectedColor;
-    e.target.innerHTML = icon;
-  }
-}
+      // Clear event from local storage
+      $(".time-block .clearBtn button").on("click", function() {
+        var hour = $(this).closest(".time-block").find(".hour").text().trim();
+        localStorage.removeItem(hour);
+        $(this).closest(".time-block").find(".description textarea").val("");
+      });
 
-// Selecting a Task/Event and making it active
-function activeTask(task, color) {
-  task.classList.toggle("selected");
+      // Reset all events
+      $(".reset-all-btn").on("click", function() {
+        localStorage.clear();
+        $(".time-block .description textarea").val("");
+      });
 
-  if (task.classList.contains("selected")) {
-    active = true;
-    selectedColor = color;
-
-    // //add the icon to the tasks inner html
-    // task.iconHTML += `<i class="fas ${iconClass}"></i>`;
-    return selectedColor;
-  } else {
-    active = false;
-    // // remove the font awesome icon
-    // const icon = task.querySelector("i");
-    // if (icon) {
-    //   icon.remove();
-    // }
-  }
-}
-
-// reset task/Event
-function resetTasks() {
-  const allTasks = document.querySelectorAll(".task__name");
-
-  allTasks.forEach((item) => {
-    item.className = "task__name";
-  });
-}
+      // Update time blocks every minute
+      setInterval(updateHourBlocks, 60000);
+    });
